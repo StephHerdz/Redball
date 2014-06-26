@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>RedBall 01</title>
+     <style>
+#tab {
+	border: 2px solid black;
+	position: absolute;
+	top: 300px;
+	left: 200px;
+}
+
+tr td {
+	border: 1px solid black;
+}
+
+</style>
+	<script>
+	function sayhello()
+{
+	alert("Hello Batsy");
+}
+function moveleft()
+{
+  redball.left=redball.left-30;
+
+ }
+ function moveright()
+{
+  redball.left=redball.left+30;
+
+ }
+  function moveup()
+{
+  redball.top=redball.top-30;
+
+ }
+  function movedown()
+{
+  redball.top=redball.top+30;
+ }
+ function moveDiagLeft()
+{
+    redball.top=redball.top-30;
+      redball.left=redball.left-30;
+}
+ function moveDiagright()
+{
+    redball.top=redball.top-30;
+      redball.left=redball.left+30;
+}
+ function moveDiagdownleft()
+{
+    redball.top=redball.top+30;
+      redball.left=redball.left-30;
+}
+ function moveDiagdownright()
+{
+    redball.top=redball.top+30;
+      redball.left=redball.left+30;
+}	
+	</script>
+	<script src="http://lrn.icstars.org/redball.js"></script>
+	</head>
+<body>
+<table id="tab">
+<tr>
+  <td><button onclick="moveDiagLeft();">Move Diag TL</button></td>
+  <td><button onclick="moveup();">Move Up</button></td> 
+  <td><button onclick="moveDiagright();">Move Diag TR</button></td>
+</tr>
+<tr>
+  <td><button onclick="moveleft();">Move Left</button></td>
+  <td><button onclick="sayhello()">Joker's Button</button></td> 
+  <td><button onclick="moveright();">Move Right</button></td>
+</tr>
+<tr>
+<td><button onclick="moveDiagdownleft();">Move Diag BL</button></td>
+  <td><button onclick="movedown();">Move Down</button></td> 
+  <td><button onclick="moveDiagdownright();">Move Diag BR</button></td>
+  </tr>
+</table>
+	<img id="redball"src="redball.jpg"/>
+	</body>
+</html>
